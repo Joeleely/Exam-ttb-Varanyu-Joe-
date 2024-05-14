@@ -101,8 +101,8 @@ html {
 
 .ability {
     display: grid;
-    grid-template-columns: 1fr 1fr;
     margin-top: 30px;
+    gap: 32px;
 }
 
 .skill {
@@ -152,14 +152,14 @@ html {
     align-items: center;
     justify-content: start;
     width: 100%;
+    gap: 32px;
 }
 
 .allskill img {
-    display: block;
+    display: grid;
     margin-left: auto;
     margin-right: auto;
     object-fit: cover;
-    width: 50px;
     border-radius: 20%;
 
 }
@@ -170,7 +170,7 @@ html {
     align-items: center;
     justify-content: start;
     width: 100%;
-    gap: 30px;
+    gap: 32px;
 }
 
 .allhobby img {
@@ -178,8 +178,16 @@ html {
     margin-left: auto;
     margin-right: auto;
     object-fit: cover;
-    width: 50px;
     border-radius: 20%;
+}
+
+.allother{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    gap: 32px;
 }
 
 .guitar {
@@ -195,26 +203,60 @@ html {
 
 .subskill {
     display: grid;
-    grid-template-columns: 1fr 1fr;
     justify-content: center;
     align-items: center;
     text-align: center;
-    gap: 10px;
+    width: 68px;
+    gap: 16px;
 }
 
-.laysub {
+.subskill img{
+    width: 50px;
+    height: 50px;
     display: grid;
-    gap: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    object-fit: contain;
+    border-radius: 20%;
+}
+
+.subskill2 {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 16px;
+    width: 95px;
+}
+
+.subskill2 img{
+    width: 50px;
+    height: 50px;
+    display: grid;
+    margin-left: auto;
+    margin-right: auto;
+    object-fit: contain;
+    border-radius: 20%;
+}
+
+
+.laysub {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
 }
 
 .layhob {
-    display: grid;
-    gap: 10px;
+    display: flex;
+    gap: 16px;
 }
 
 .layother {
-    display: grid;
-    gap: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
 }
 
 .subskill:nth-child(1) {
@@ -398,5 +440,14 @@ ul {
 @media (width <675px){
     .name{
         font-size: 70px;
+    }
+    .bg2{
+        height: 100%;
+    }
+}
+
+@media (width <376px){
+    .name{
+        font-size: 50px;
     }
 }
